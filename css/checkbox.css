@@ -1,0 +1,57 @@
+@font-face {
+    font-family: BigBlueTerminal;
+    src: url(../fonts/BigBlue\ Terminal\ 437TT\ Nerd\ Font\ Complete\ Mono.TTF);
+}
+
+.check-container{
+    display: flex;
+    align-items: center;
+}
+.en{
+    color: whitesmoke;
+    font-family: 'BigBlueTerminal';
+    margin-top: 13px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.es{
+    color: whitesmoke;
+    font-family: 'BigBlueTerminal';
+    margin-top: 13px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.check{
+    position: relative;
+    width: 50px;
+    margin: 0;
+}
+.check::before{
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 25px;
+    background: #333;
+    border-radius: 25px;
+}
+.check::after{
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background: #fff;
+    border-radius: 25px;
+    transition: 0.25s;
+    border: 2px solid #333;
+    box-sizing: border-box;
+}
+.check:checked:after{
+    left: 25px;
+    border: 2px solid #00a1ff;
+}
+.check:checked:before{
+    background: #00a1ff;
+
+}
